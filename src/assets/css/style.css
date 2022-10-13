@@ -1036,8 +1036,8 @@ textarea:focus {
 .popup_calc_profile_content .checkbox-custom,
 .popup_calc_profile_content .label {
   display: inline-block;
-  vertical-align: middle;
-}
+  vertical-align: middle;modal
+}modal
 
 .popup_calc_profile_content .checkbox:checked+.checkbox-custom::before {
   content: "";

@@ -1,6 +1,5 @@
 import checkNumInputs from './checkNumInputs';
 
-
 const forms = () => {
 // находим все формы и инпуты
     const form = document.querySelectorAll('form'),
@@ -23,7 +22,7 @@ const postData = async (url, data) => {
     return await res.text()
 }
 const clearInputs = () => {
-    Inputs.forEach(item => {
+    inputs.forEach(item => {
         item.value = '';
     });
 };
@@ -35,10 +34,10 @@ const clearInputs = () => {
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
             item.appendChild(statusMessage);
-//собираем все введенные данные из формы
-        const formData = new FormData(item);
-//отправляем запрос на сервер с данными которые получил FormData
-        postData('assets/server.php', formData)
+            //собираем все введенные данные из формы через конструктор
+            const formData = new FormData(item);
+            //отправляем запрос на сервер с данными которые получил FormData
+            postData('assets/server.php', formData)
             .then(res => {
                 console.log(res);
                 statusMessage.textContent = message.success;

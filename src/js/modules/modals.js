@@ -14,6 +14,7 @@ const modals = () => {
         //     document.body.classList.add("modal-open")
         // });
         trigger.forEach(item => {
+
             item.addEventListener("click",(e) => {
                     if (e.target) {
                         e.preventDefault();
@@ -24,15 +25,13 @@ const modals = () => {
                     modal.style.display = "block";
                     // document.body.style.overflow = "hidden";
                     document.body.classList.add("modal-open")
-
-
                 });
         });
 
 
 
         close.addEventListener('click', () => {
-            modal.style.display = "none";
+            // modal.style.display = "none";
             // document.body.style.overflow = "";
             document.body.classList.remove("modal-open")
             windows.forEach(item => {
@@ -45,7 +44,7 @@ const modals = () => {
                 windows.forEach(item => {
                     item.style.display = "none";
                 })
-                modal.style.display = "none";
+                // modal.style.display = "none";
                 // document.body.style.overflow = "";
                 document.body.classList.remove("modal-open")
             }
@@ -69,7 +68,7 @@ const modals = () => {
         }, time);
         
     };
-    // ShowModalByTime('.popup', 60000 );
+    // ShowModalByTime('.popup', 0000 );
 };
 
 

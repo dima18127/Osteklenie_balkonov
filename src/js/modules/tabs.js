@@ -20,15 +20,17 @@ const tabs = (HeaderSelector, tabSelector, contentSelector, activeClass,  displa
         showTabContent();
         header.addEventListener('click', (e) => {
             const target = e.target;
-            if ( target && (target.classList.contains(tabSelector.replace(/\./, "")) 
-            || target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
+            //уюедились что кликнули в таб
+            // if ( target && (target.classList.contains(tabSelector.replace(/\./, "")) 
+            // || target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
+            // Перебираем таб
             tab.forEach((item, i)=>{
                 if (target == item ||  target.parentNode  == item) {
                     hideTabContent();
                     showTabContent(i);
                 }
                 });
-            }
+            // }
         });
     };
     

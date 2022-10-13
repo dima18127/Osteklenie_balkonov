@@ -5,7 +5,9 @@ const webpack = require("webpack-stream");
 const browsersync = require("browser-sync");
 
 // const dist = "./dist/";
-const dist = "C:/Users/dima1/OneDrive/Рабочий стол/JsPractic/OSPanel/domains/dist";
+const dist = "C:/Users/dima1/OneDrive/Рабочий стол/OknaJS/Source/dist";
+// const dist = "C:/Users/dima1/OneDrive/Рабочий стол/OknaJS/OSPanel/domains/dist";
+
 
 gulp.task("copy-html", () => {
     return gulp.src("./src/index.html")
